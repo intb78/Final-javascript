@@ -1,9 +1,55 @@
 # CAMel Tools Presentation
 
 **Introduction**
+
 This project relies on HTML and JavaScript designed for a CAMel Tools presentation.
 The website includes sections for About, Home, and Youtube, along with a navigation bar.
 Users can navigate through the sections, view a slideshow, and log in to the website.
+
+**JavaScript features used:**
+
+- Regex: The regular expressions used in this code are the same as those used in the partial exam.
+
+- Event Handling:
+  - onclick
+  - keyCode 13
+
+- Data Storage:
+  - sessionStorage.setItem 
+  - sessionStorage.getItem
+
+- Conditional Statements and Loops:
+  - if statements
+  - for loops
+
+- DOM Manipulation:
+  - getElementById 
+  - getElementByClass
+
+- Styling Manipulation:
+  - .style
+
+- Timed Execution:
+  - setInterval
+
+- User Interface Interaction:
+  - showSlides
+  - plusSlides
+  - currentSlide
+
+- Section Display Control:
+  - showSection
+
+- Login Functionality:
+  - checkLoginStatus
+  - login
+  - showLoginModal
+  - closeLoginModal
+
+- Custom Alert:
+  - showCustomAlert
+  - closeCustomAlert
+
 
 **Features:**
 
@@ -18,3 +64,4 @@ Users can navigate through the sections, view a slideshow, and log in to the web
 - Custom Alert: A custom alert is displayed for login feedback and other messages.
 
 - Logged-In as: It will show the username of the logged-in user
+

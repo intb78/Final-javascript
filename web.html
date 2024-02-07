@@ -234,11 +234,11 @@
                 <div id="login-form">
                     <label for="email">Email:</label>
                     <span> Please Enter a valid E-mail</span>
-                    <input type="text" id="email" name="email" required pattern="^[a-z0-9](?:[a-z0-9._-]{0,18}[a-z0-9._-])?@[a-z0-9](?:[a-z0-9-])*\.[a-z]{2,}$">
+                    <input type="text" id="email" name="email">
                     <label for="password">Password:</label>
                     <span>(Password must be at least 8 characters, contain at least 1 special character, start with capital)</span>
-                    <input type="password" id="password" name="password" required pattern="^(?=[A-Z].*)(?=.*\d)(?=.*[!@#$%^&*_\-.])[A-Za-z\d!@#$%^&*_\-.]{8,}$">
-                    <button onclick="login()">Login</button>
+                    <input type="password" id="password" name="password">
+                    <button id="login_button" onclick="login()">Login</button>
                 </div>
                 <p id="login-message"></p>
             </div>
@@ -376,7 +376,7 @@
         const passwordRegex = /^(?=[A-Z].*)(?=.*\d)(?=.*[!@#$%^&*_\-.])[A-Za-z\d!@#$%^&*_\-.]{8,}$/;
 
         if (emailRegex.test(emailInput.value) && passwordRegex.test(passwordInput.value)) {
-            showCustomAlert('Login successful!');
+            showCustomAlert('Welcome ' + username+ '- Login successful!');
             // Set login status to true in sessionStorage
             sessionStorage.setItem('isLoggedIn', 'true');
             // Close login modal after successful login
@@ -387,6 +387,18 @@
             showCustomAlert('Invalid email or password.');
         }
     }
+
+    document.getElementById('email').addEventListener('keypress', function (event) {
+        if (event.keyCode === 13) {
+            login();
+        }
+    });
+
+    document.getElementById('password').addEventListener('keypress', function (event) {
+        if (event.keyCode === 13) {
+            login();
+        }
+    });
 
     function showCustomAlert(message) {
         const customAlert = document.getElementById('custom-alert');
