@@ -12,7 +12,7 @@ Users can navigate through the sections, view a slideshow, and log in to the web
 
 - Event Handling:
   - onclick
-  - keyCode 13
+  - keyCode 13 (used only in the login modal)
 
 - Data Storage:
   - sessionStorage.setItem 
